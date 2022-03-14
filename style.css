@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+
 }
 
 h2 {
@@ -28,10 +29,19 @@ section {
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
+  border: 20px solid #fff;
+  border-bottom: none;
+  
 }
 
-main img {
-  width: 100px;
+
+
+main img{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin:20px auto;
 }
 
 /* ---  Groups & Items --- */
@@ -64,8 +74,20 @@ header {
   color: #fff;
 }
 
+header nav{
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul{
+  display: flex;
+  flex-direction: row;
+}
+
 header nav ul li {
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
 }
 
 header nav ul li a {
@@ -82,7 +104,16 @@ header nav ul li a:hover {
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
-  padding: 10px;
+  padding: 20px;
+  display:flex;
+  flex-direction: column; 
+  
+ }
+
+
+form div{
+  display: flex;
+  justify-content: space-between;
 }
 
 form label {
@@ -108,6 +139,8 @@ form button {
 
 footer {
   background-color: #ff385c;
+  border-left: 20px solid #fff; 
+  border-right: 20px solid #fff;
 }
 
 footer p {
@@ -117,3 +150,77 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px){
+   
+header {
+display: flex;
+justify-content: space-between;
+margin: 20px;
+flex-wrap: wrap;
+  }
+
+form {
+width: auto;
+display: flex;
+flex-direction: row; 
+column-gap: 50px;
+justify-content: space-evenly;
+margin: auto;
+flex-wrap: wrap;
+}
+
+form div {
+  display: flex; 
+  flex-direction: column;
+}
+
+
+.group {
+  display: flex;
+  flex-direction: row;
+ justify-content:center;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+  flex-direction: row;
+  align-self: center;
+}
+
+.item-double {
+  flex: 2;
+  align-self: center;
+}
+
+.contain {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px;
+  
+  }
+
+
+ 
+  
+.item1 {
+margin: 10px;
+ 
+}
+
+
+
+.group2 {
+ display: flex;
+flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item3 {
+  flex: 1;
+  flex-direction: row; 
+  align-self: center;
+} 
+}
