@@ -2,7 +2,7 @@
 
 html, body {
   font-family: "Lato", sans-serif;
-  width: 100%;
+  width: fit-content;
   height: 100%;
   margin: 0px;
   padding: 0px;
